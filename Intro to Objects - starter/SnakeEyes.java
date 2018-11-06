@@ -30,7 +30,8 @@ public class SnakeEyes
       System.out.println ("Number of snake eyes: " + snakeEyes);
       System.out.println ("Ratio: " + (double)snakeEyes/ROLLS);
 
-      System.out.println(die3.getFaceValue() );
+      System.out.println(die1.getFaceValue()+ "Die1");
+      System.out.println(die3.getFaceValue()+"Die3" );
       System.out.println(die2);
    }
 }
