@@ -16,6 +16,11 @@ public class Die
    /**
      Defaults to a six-sided die. Initial face value is 1.
    */
+   public Die()
+   {
+       numFaces = 6;
+       faceValue = 1;
+    }    
    public Die (int numFaces)
    //all parameters are local variables 
    {
@@ -36,18 +41,7 @@ public class Die
      Initial face value is random.
      @parm int number of sides of the die
    */
-  //constructor does not have a return type 
-  public Die(int number_of_faces)
-  {
-      faceValue = 1;
-      if (number_of_faces < MIN_FACES)
-      {
-          numFaces = 6;
-        }
-      else
-          numFaces = number_of_faces;
-      
-    }
+ 
 
 
 
@@ -63,13 +57,19 @@ public class Die
         Rolls the die and returns the result.
         @return
    */
-   public int roll ()
+   public void roll ()
    {
       
-      faceValue = 0; // you put the correct  code here
-      return faceValue;
+      faceValue = generator.nextInt(numFaces)+1; // you put the correct  code here
+      //return faceValue;
    }
-
+   /**
+    * G
+    */
+   public int getnumFaces()
+   {
+       return numFaces;
+    }
    /**
         Returns the current die value.
         @return _____________________write comment
@@ -95,11 +95,12 @@ public class Die
 
    /**
         Returns the current die value and number of sides as a String.
-        @return _____________
+        @return private data faceValue & numFaces
    */
-   public String methodName ()
+   public String toString ()
    {
-      String data ="";
+      String data ="Face Value"+ faceValue;
+      data +="\nNumber of Faces" + numFaces;
 
 
 

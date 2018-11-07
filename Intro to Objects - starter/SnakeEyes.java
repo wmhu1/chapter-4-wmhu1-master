@@ -18,11 +18,15 @@ public class SnakeEyes
       Die die1 = new Die();    // creates a six-sided die
       Die die2 = new Die(20);  // creates a twenty-sided die
       Die die3 = new Die (1);  // creates an invalid die -- so sides are 6
-
       for (int roll = 1; roll <= ROLLS; roll++)
       {
-
-         // write correct code to check for snake eyes
+         
+         die1.roll();
+         die3.roll();
+         if (die1.getFaceValue() == 1 && die3.getFaceValue()== 1)
+            snakeEyes++;
+         else
+            System.out.println(die1.getFaceValue());
 
       }
 
@@ -32,6 +36,6 @@ public class SnakeEyes
 
       System.out.println(die1.getFaceValue()+ "Die1");
       System.out.println(die3.getFaceValue()+"Die3" );
-      System.out.println(die2);
+      System.out.println(die2);//if toString() isn't written, it will print out class and the memory address
    }
 }
