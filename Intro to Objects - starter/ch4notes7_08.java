@@ -22,6 +22,11 @@ public static void main (String[] args)
     System.out.println(abs(-8));
     System.out.println(solver.add(5,10,20));
     System.out.println(solver.getPi());
+    
+    Address my_home = new Address("916 Elm St.","Flossmoor","IL",60422);
+    Address marks_home = new Address("712 Maple Ave.","Flossmoor","IL",60422);
+    Address sister = new Address(my_home);
+    System.out.println(sister_home);
 
 /**/
 }// end of main

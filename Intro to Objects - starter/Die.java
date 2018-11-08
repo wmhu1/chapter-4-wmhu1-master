@@ -88,9 +88,15 @@ public class Die
 
   /**
         Sets the number of faces of the Die
-        @param _________________
+        @param new number of Faces for the Die
   */
-
+  public void setnumFaces(int numFaces)
+  {
+      if(numFaces > MIN_FACES)
+            this.numFaces = numFaces;
+            
+      
+    }
 
 
    /**

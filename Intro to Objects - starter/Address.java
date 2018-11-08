@@ -22,8 +22,19 @@ public class Address
       state = st;
       zipCode = zip;
    }
-
-
+   
+   /**
+    * Copy constructor 
+    * @param Address object
+    */
+   public Address(Address other)
+   {
+       //this = other;//this is a big no no
+       this.streetAddress = other.streetAddress;
+       this.city = other.city;
+       state = other.state;
+       zipCode = other.zipCode;
+    }
 
 
 
