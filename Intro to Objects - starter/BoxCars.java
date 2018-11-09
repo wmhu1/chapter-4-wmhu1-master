@@ -26,6 +26,9 @@ public static void main (String[] args)
 	System.out.println("Number of BoxCars:  "  + count  );
 
 	//call the get methods and toString of dice
+	System.out.println("Die 1 Face Value: " + dice.getDie1());
+	System.out.println("Die 2 Face Value: " + dice.getDie2());
+	System.out.println("To String: " + dice.toString());
 
 
 

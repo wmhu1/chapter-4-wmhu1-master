@@ -1,2 +1,20 @@
 #BlueJ class context
-numComments=0
+comment0.params=
+comment0.target=PairOfDice()
+comment0.text=----------\ Default\ Constructor\r\n\ \ \ \ \ \ \ \ Creates\ two\ six-sided\ Die\ objects,\ both\ with\ an\ initial\r\n\ \ \ \ \ \ \ \ face\ value\ of\ one.\r\n
+comment1.params=
+comment1.target=int\ roll()
+comment1.text=-----------\ roll()\r\n\ \ \ \ \ \ \ \ Rolls\ both\ dice\ and\ returns\ the\ combined\ result.\r\n\ \ \ \ \ \ \ \ @return\r\n
+comment2.params=
+comment2.target=int\ getTotal()
+comment2.text=--------------\ getTotal()\r\n\ \ \ \ \ \ \ \ Returns\ the\ current\ combined\ dice\ total.\r\n\ \ \ \ \ \ \ \ @return\r\n
+comment3.params=
+comment3.target=int\ getDie1()
+comment3.text=----------------\ getDie1()\r\n\ \ \ \ \ \ \ \ Returns\ the\ current\ value\ of\ the\ first\ die.\r\n\ \ \ \ \ \ \ \ @return\r\n
+comment4.params=
+comment4.target=int\ getDie2()
+comment4.text=-------------\ getDie2()\r\n\ \ \ \ \ \ \ \ Returns\ the\ current\ value\ of\ the\ second\ die.\r\n\ \ \ \ \ \ \ \ @return\r\n
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment5.text=-------------\ toString()\r\n\ \ \ \ \ \ \ \ \ \ \ \ Returns\ the\ current\ data\ for\ each\ die\r\n\ \ \ \ \ \ \ \ \ \ \ \ hint\:\ use\ methods\ in\ die\ to\ build\ the\ String\ to\ return\r\n\ \ \ \ \ \ \ \ \ \ \ \ @return\r\n
+numComments=6

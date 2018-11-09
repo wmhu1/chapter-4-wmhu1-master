@@ -6,11 +6,11 @@ public class TurtleTest
   {
     Random randNumGen = new Random();
     World world = new World(false);
-    Turtle[] turtleArray = new Turtle[10];
-    for (int i=0; i < 100; i++)
+    Turtle[] turtleArray = new Turtle[100000];
+    for (int i=0; i < 100000; i++)
       turtleArray[i] = new Turtle(world);
     
-    for (int i=0; i < 100; i++)
+    for (int i=0; i < 100000; i++)
     {
       turtleArray[i].turn(randNumGen.nextInt(360));
       turtleArray[i].forward(100);

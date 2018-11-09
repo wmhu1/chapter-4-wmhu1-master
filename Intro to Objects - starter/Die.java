@@ -76,7 +76,7 @@ public class Die
    */
    public int getFaceValue ()
    {
-      return faceValue;
+      return faceValue1;
    }
 
 
