@@ -58,8 +58,56 @@ public class Turtle extends SimpleTurtle
   }  
   
   /////////////////// methods ///////////////////////
-
-
+  /**
+   * Draws a square of set lenght 20
+   */
+  public void drawSquare()
+  {
+      forward(20);
+      turnLeft();
+      forward(20);
+      turnLeft();
+      forward(20);
+      turnLeft();
+      forward(20);
+      turnLeft();
+      
+      
+    }
+  public void drawSquare(int width)
+  {
+      forward(width);
+      turnLeft();
+      forward(width);
+      turnLeft();
+      forward(width);
+      turnLeft();
+      forward(width);
+      turnLeft();
+    }
+  public void drawRectangle(int width, int height)
+  {
+      forward(width);
+      turnLeft();
+      forward(height);
+      turnLeft();
+      forward(width);
+      turnLeft();
+      forward(height);
+      turnLeft();
+      
+    }
+  public void drawEquilateralTriangle(int side)
+  {
+      forward(side);
+      turn(60);
+      forward(side);
+      turn(-120);
+      forward(side);
+      turn(-120);
+      forward(side);
+      
+    }
   public static void main(String[] args)
   {
     World earth = new World();
