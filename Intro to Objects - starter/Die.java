@@ -19,7 +19,7 @@ public class Die
    public Die()
    {
        numFaces = 6;
-       faceValue = 1;
+       roll();
     }    
    public Die (int numFaces)
    //all parameters are local variables 
@@ -76,7 +76,7 @@ public class Die
    */
    public int getFaceValue ()
    {
-      return faceValue1;
+      return faceValue;
    }
 
 
