@@ -16,7 +16,8 @@ public class TurtleTest
       turtleArray[i].forward(100);
       //turtleArray[i].drawSquare(100);
       //turtleArray[i].drawRectangle(10,50);
-      turtleArray[i].drawEquilateralTriangle(50);
+      //turtleArray[i].drawEquilateralTriangle(50);
+      turtleArray[i].randomwalk(100);
     }
     world.setVisible(true);
     

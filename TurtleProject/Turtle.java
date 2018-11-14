@@ -1,6 +1,6 @@
 import java.util.*;
 import java.awt.*;
-
+import java.util.Random;
 /**
  * Class that represents a turtle which is similar to a Logo turtle.
  * This class inherts from SimpleTurtle and is for students
@@ -85,6 +85,10 @@ public class Turtle extends SimpleTurtle
       forward(width);
       turnLeft();
     }
+  /**
+   * Draws a rectangle of a given width and height
+   * @param height and width
+   */
   public void drawRectangle(int width, int height)
   {
       forward(width);
@@ -97,6 +101,9 @@ public class Turtle extends SimpleTurtle
       turnLeft();
       
     }
+  /**Draws an equilateral triangle with a given side length
+   * @param side
+   */
   public void drawEquilateralTriangle(int side)
   {
       forward(side);
@@ -107,6 +114,20 @@ public class Turtle extends SimpleTurtle
       turn(-120);
       forward(side);
       
+    }
+  /**Random walk for the turtle
+   * @param steps taken
+   */
+  public void randomwalk(int steps)
+  {
+      for(int i = 0; i <steps; i++)
+        {
+            Random ran = new Random();
+            int direction = ran.nextInt(4)+ 1;
+            direction = direction * 90;
+            turn(direction);
+            forward(10);
+        }
     }
   public static void main(String[] args)
   {

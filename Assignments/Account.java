@@ -6,7 +6,7 @@
 //********************************************************************
 
 import java.text.NumberFormat;
-
+import java.util.Scanner;
 
 public class Account
 {
@@ -28,6 +28,12 @@ public class Account
       acctNumber = account;
       balance = initial;
    }
+   public Account(String owner, int account)
+   {
+       name = owner;
+       acctNumber = account;
+       balance = 0;
+    }
 
    /**
    *  Validates the transaction, then deposits the specified amount
@@ -80,12 +86,16 @@ public class Account
    *  Asks the user for amount to transfer
    *  from one account to another.
    */
-   public void transfer (/*object*/)
+   public void transfer (Account other)
    {
-	   System.out.print("Enter amount to transfer");
-		double trans = 0; //aScannerObject.nextDouble();
+        System.out.print("Enter amount to transfer");
+        Scanner keyboard = new Scanner(System.in);
+        double transfer = keyboard.nextDouble();
+        this.withdraw(transfer,0);
+        other.deposit(transfer);
 
    }
+   //public void 
 
    /**
    *  Adds interest to the account and returns the new balance.
@@ -99,12 +109,18 @@ public class Account
    /**
    *  Returns the current balance of the account.
    */
-
+   public double getBalance()
+   {
+       return balance;
+    }
 
    /**
    *  Returns the account number.
    */
-
+   public int getacctNumber()
+   {
+       return acctNumber;
+    }
 
    /**
    *  Returns a one-line description of the account as a string.
