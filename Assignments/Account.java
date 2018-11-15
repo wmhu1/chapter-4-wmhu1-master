@@ -109,9 +109,9 @@ public class Account
    /**
    *  Returns the current balance of the account.
    */
-   public double getBalance()
+   public String getBalance()
    {
-       return balance;
+       return fmt.format(balance);
     }
 
    /**
@@ -127,6 +127,9 @@ public class Account
    */
    public String toString ()
    {
-      return ("supply correct data");
+      String data = ("Account Name: " + name);
+      data+= ("\nAccount Number: " + acctNumber);
+      data+= ("\nYour current balance: " + fmt.format(balance));
+      return data;
    }
 }
