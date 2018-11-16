@@ -3,7 +3,6 @@
 //
 //  Demonstrates the use of an aggregate class.
 //********************************************************************
-
 public class StudentBody 
 {
    //-----------------------------------------------------------------
@@ -25,5 +24,7 @@ public class StudentBody
       System.out.println (john);
       System.out.println ();
       System.out.println (marsha);
+
+      
    }
 }

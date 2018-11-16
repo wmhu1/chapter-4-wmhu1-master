@@ -20,6 +20,10 @@ public class Student
       homeAddress = home;
       schoolAddress = school;
    }
+   public Student setTestScore(testnum, score)
+   {
+       
+    }
 
    //-----------------------------------------------------------------
    //  Returns this Student object as a string.
