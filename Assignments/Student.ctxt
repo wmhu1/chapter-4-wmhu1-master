@@ -1,4 +1,14 @@
 #BlueJ class context
-comment0.params=
-comment0.target=java.lang.String\ toString()
-numComments=1
+comment0.params=first\ last\ home\ score1\ score2\ score3
+comment0.target=Student(java.lang.String,\ java.lang.String,\ Address,\ int,\ int,\ int)
+comment1.params=first\ last\ home
+comment1.target=Student(java.lang.String,\ java.lang.String,\ Address)
+comment2.params=testnum\ score
+comment2.target=void\ setTestScore(int,\ int)
+comment3.params=testnum
+comment3.target=int\ getTestScore(int)
+comment4.params=score1\ score2\ score3
+comment4.target=int\ average(int,\ int,\ int)
+comment5.params=
+comment5.target=java.lang.String\ toString()
+numComments=6
