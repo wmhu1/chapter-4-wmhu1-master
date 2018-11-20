@@ -35,6 +35,11 @@ public class Address
        state = other.state;
        zipCode = other.zipCode;
     }
+   public boolean equals(Address other)
+   {
+       return(streetAddress.equals(other.streetAddress) && city.equals(other.city) && 
+       state.equals(other.state) && zipCode == other.zipCode);
+    }
 
 
 

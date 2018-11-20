@@ -76,7 +76,11 @@ public class Student
        s3 = score3;
        average = (s1 + s2 + s3) / 3;
        return average;
-    }   
+    }
+   public boolean equals(Student other)
+   {
+       return(firstName.equals(other.firstName) && homeAddress.equals(other.homeAddress));
+    }
    //-----------------------------------------------------------------
    //  Returns this Student object as a string.
    //-----------------------------------------------------------------
@@ -84,11 +88,10 @@ public class Student
    {
       String result;
 
-      result = firstName + " " + lastName + "\n";
-      result += "Home Address:\n" + homeAddress + "\n";
-      result += "School Address:\n" + schoolAddress + "\n";
-      result += "Home Address:\n" + homeAddress + "\n";
-      result += "Test 1:" + s1 + "\tTest 2:" + s2 + "\tTest 3:"+ s3;
+      result = "\n"+firstName + " " + lastName;
+      result += "\nSchool Address:\n" + schoolAddress + "\n";
+      result += "\nHome Address:\n" + homeAddress + "\n";
+      result += "\nTest 1:" + s1 + "\tTest 2:" + s2 + "\tTest 3:"+ s3;
       result += "\tTest Average:" + average;
       return result;
    }
