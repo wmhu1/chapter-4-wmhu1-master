@@ -14,7 +14,10 @@ public class Address
    //-----------------------------------------------------------------
 
    public Address(){}
-
+   /**
+    * Creates the address object based off the given parameters
+    *@param street town state and zipcode
+    */ 
    public Address (String street, String town, String st, int zip)
    {
       streetAddress = street;
@@ -35,6 +38,10 @@ public class Address
        state = other.state;
        zipCode = other.zipCode;
     }
+   /**
+    * Equals method to test if two addresses are the same
+    * @return True or False
+    */
    public boolean equals(Address other)
    {
        return(streetAddress.equals(other.streetAddress) && city.equals(other.city) && 
@@ -43,9 +50,9 @@ public class Address
 
 
 
-   //-----------------------------------------------------------------
-   //  Returns this Address object as a string.
-   //-----------------------------------------------------------------
+   /**
+    * Returns the address object as a string
+    */
    public String toString()
    {
       String result;

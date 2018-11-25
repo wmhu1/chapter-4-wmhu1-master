@@ -84,16 +84,46 @@ public class Account
 
    /**
    *  Asks the user for amount to transfer
-   *  from one account to another.
+   *  from one account to another, validates transaction, withdrawing
+   *  specified amount from one account, depositing in the other.
    */
    public void transfer (Account other)
    {
         System.out.print("Enter amount to transfer");
         Scanner keyboard = new Scanner(System.in);
         double transfer = keyboard.nextDouble();
+        if (transfer < 0)
+      {
+         System.out.println ();
+         System.out.println ("Error: Transfer amount is invalid.");
+         System.out.println ("Account: " + this.acctNumber);
+         System.out.println ("Tranfer Amount: " + fmt.format(transfer));
+         System.out.println("Available: " + fmt.format(this.balance));
+         System.out.println("You cannot transfer negative money");
+      }
+      else 
+        if (transfer > balance)
+        {
+            System.out.println ();
+            System.out.println ("Error: Insufficient funds.");
+            System.out.println ("Account: " + acctNumber);
+            System.out.println ("Transfer Amount: " + fmt.format(transfer));
+            System.out.println ("Available: " + fmt.format(balance));
+            System.out.println("Your desired transfer amount exceeds your current balance");
+        }
+        else
+        {
+        System.out.println ("Account: " + acctNumber);
+        System.out.println ("Transfer Amount: " + fmt.format(transfer));
+        System.out.println ("Available: " + fmt.format(balance));
+        System.out.println ("----------------------------------");
+        System.out.println ("Transfer Account Information:");
+        System.out.println("Name: " + other.name);
+        System.out.println("Account: " + other.acctNumber);
+        System.out.println("Balance: " + fmt.format(other.balance));
         this.withdraw(transfer,0);
         other.deposit(transfer);
-
+    }
    }
    //public void 
 

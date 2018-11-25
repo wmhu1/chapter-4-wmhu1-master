@@ -15,6 +15,10 @@ public class Student
    //-----------------------------------------------------------------
    //  Sets up this Student object with the specified initial values.
    //-----------------------------------------------------------------
+   /**
+    * Creates the student object with the specified initial values
+    * Their school address will be the same every time
+    */
    public Student (String first, String last, Address home,
                    int score1,int score2,int score3)
    {
@@ -27,6 +31,10 @@ public class Student
       s2 = score2;
       s3 = score3;
    }
+   /**
+    * Sets up the student object without the scores
+    * Scores will be preset to 0
+    */
    public Student (String first, String last, Address home)
    {
       firstName = first;
@@ -38,6 +46,10 @@ public class Student
       s2 = 0;
       s3 = 0;
    }
+   /**
+    * Sets the test score if the user gives a specified test number
+    * and score
+    */
    public void setTestScore(int testnum, int score)
    {
        if (testnum == 1)
@@ -53,6 +65,10 @@ public class Student
            s3 = score;
         }
     }
+   /**
+    * Retrieves the test score from the student class to be used
+    * in the client
+    */
    public int getTestScore(int testnum)
    {
        int testscore = 10;
@@ -69,6 +85,9 @@ public class Student
        return testscore;
         
     }
+   /**
+    * A method that will calculate the average and return it
+    */
    public int average(int score1,int score2, int score3)
    {
        s1 = score1;
@@ -77,13 +96,19 @@ public class Student
        average = (s1 + s2 + s3) / 3;
        return average;
     }
+   /**
+    * A method to identify if two people are the same if their
+    * first name and address are the same
+    * @return True or False
+    */
    public boolean equals(Student other)
    {
        return(firstName.equals(other.firstName) && homeAddress.equals(other.homeAddress));
     }
-   //-----------------------------------------------------------------
-   //  Returns this Student object as a string.
-   //-----------------------------------------------------------------
+   /**
+    * Returns all the information stored in the student object
+    * as a string
+    */
    public String toString()
    {
       String result;

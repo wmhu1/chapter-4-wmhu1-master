@@ -4,6 +4,7 @@
 //  Driver to exercise the use of multiple Account objects.
 //********************************************************************
 import java.util.Scanner;
+import java.text.NumberFormat;
 public class Banking
 {
    //-----------------------------------------------------------------
@@ -11,6 +12,7 @@ public class Banking
    //-----------------------------------------------------------------
    public static void main (String[] args)
    {
+      NumberFormat fmt = NumberFormat.getCurrencyInstance();
       //initializing new objects
       Account acct1 = new Account ("Ted Murphy", 72354, 102.56);
       Account acct2 = new Account ("Anita Gomez", 69713, 40.00);
@@ -35,9 +37,13 @@ public class Banking
           {
               System.out.println("Very well, you have decided to deposit. How much money would you like to deposit?");
               double deposit = keyboard.nextDouble();
+              
+              System.out.println("Account: "+acct2.getacctNumber());
+              System.out.println("Deposit Amount: "+ fmt.format(deposit));
+              System.out.println("Current Balance: " + acct2.getBalance());
               acct2.deposit(deposit);
-              System.out.println ("Gomez balance after deposit: "+ acct2.getBalance());
-              System.out.println("Would you like to do anything else today?");
+              System.out.println ("\nNew Balance: "+ acct2.getBalance());
+              System.out.println("\nWould you like to do anything else today?");
               System.out.println("1.) Deposit\t2.) Withdraw\t3.) Transfer\t4.) Exit");
               choice = keyboard.nextInt();
               
@@ -45,33 +51,38 @@ public class Banking
           if (choice == 2)
           //withdraw method
           {
-              System.out.println("Very well, you have decided to withdraw. How much money would you like to withdraw?");
+              System.out.println("Very well, you have decided to withdraw. Please note there is an extra $1.25 dollar fee included.\nHow much money would you like to withdraw?");
               double withdraw = keyboard.nextDouble();
+              System.out.println("Account: "+acct2.getacctNumber());
+              System.out.println("Requested: "+ fmt.format(withdraw));
+              System.out.println("Requested w/ Fee: "+ fmt.format(withdraw + 1.25));
+              System.out.println("Available: " + acct2.getBalance());
               acct2.withdraw(withdraw,1.25);
-              System.out.println ("Gomez balance after deposit: "+ acct2.getBalance());
-              System.out.println("Would you like to do anything else today?");
+              System.out.println ("\nNew Balance: "+ acct2.getBalance());
+              System.out.println("\nWould you like to do anything else today?");
               System.out.println("1.) Deposit\t2.) Withdraw\t3.) Transfer\t4.) Exit");
               choice = keyboard.nextInt();
             }
           if (choice == 3)
           {
           //transfer method
-              System.out.println("Very well, you have decided to transfer." );
-              System.out.println("Your balance: "+ acct2.getBalance());
-              System.out.println("Sanchit Balance: "+ acct3.getBalance());
+              System.out.println("Very well, you have decided to transfer.");
               acct2.transfer(acct3);
-              System.out.println("Anita Balance: "+ acct2.getBalance());
+              System.out.println("----------------------------------------");
+              System.out.println("After Transfer:");
+              System.out.println("Your Balance: "+ acct2.getBalance());
               System.out.println("Sanchit Balance: "+ acct3.getBalance());
-              System.out.println("Would you like to do anything else today?");
+              System.out.println("\nWould you like to do anything else today?");
               System.out.println("1.) Deposit\t2.) Withdraw\t3.) Transfer\t4.) Exit");
               choice = keyboard.nextInt();
           }
-          //Printing the user information at the end.
-          System.out.println(acct2.toString());
-          System.out.println("Thank you.\n");
-          System.out.println("Have a nice day!");
+          
           
 
    }
+   //Printing the user information at the end.
+          System.out.println(acct2.toString());
+          System.out.println("Thank you.\n");
+          System.out.println("Have a nice day!");
 }
 }
