@@ -1,4 +1,6 @@
 //********************************************************************
+//Will Hu
+//Student Program Main
 //  StudentBody.java       Author: Lewis/Loftus/Cocking
 //
 //  Demonstrates the use of an aggregate class.
